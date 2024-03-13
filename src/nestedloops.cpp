@@ -4,13 +4,28 @@ using namespace std;
 int main()
 {
 
+    // int grade, sum;   If I don't initialize sum, it gives a result like this:
+    
     int grade, sum = 0;
     for(int i=0; i < 3; i++) {
         do {
             cout << "Enter grade " << i + 1 << ": ";
             // cin >> grade;  This line doesn't work on VS Code.
             // hard code in the grade instead
-            grade = 7;
+            if (i == 0) {
+                grade = 3;
+                cout << grade << endl;;
+            }
+            else if (i == 1) {
+                grade = 2;
+                cout << grade << endl;;
+
+            }
+            else {
+                grade = 5;
+                cout << grade << endl;;
+
+            }
         } while (grade < 1 || grade > 5);
         sum += grade;
     }
